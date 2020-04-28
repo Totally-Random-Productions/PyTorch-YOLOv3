@@ -62,7 +62,7 @@ class ListDataset(Dataset):
             self.img_files = file.readlines()
 
         self.label_files = [
-            path.replace("images", "labels").replace(".png", ".txt").replace(".jpg", ".txt")
+            path.replace("images", "labels").replace(".png", ".txt").replace(".jpg", ".txt").replace(".JPG", ".txt")
             for path in self.img_files
         ]
         self.img_size = img_size
@@ -101,6 +101,10 @@ class ListDataset(Dataset):
         # ---------
 
         label_path = self.label_files[index % len(self.img_files)].rstrip()
+        # print('')
+        # print('printing label path')
+        # print('')
+        # print(label_path)
 
         targets = None
         if os.path.exists(label_path):

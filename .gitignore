@@ -9,4 +9,15 @@ data/coco
 backup
 weights/*.weights
 __pycache__
-checkpoints
+
+data/custom/images/
+
+data/custom/labels/
+
+.idea/
+
+logs/
+
+checkpoints/
+
+weights/
